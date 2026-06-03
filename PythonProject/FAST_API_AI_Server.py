@@ -75,6 +75,6 @@ async def analyse(request: AnalysisRequest):
 # =========================================================
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="192.168.0.47", port=8000)
+    uvicorn.run(app, host="192.168.219.102", port=8000)
 
 
