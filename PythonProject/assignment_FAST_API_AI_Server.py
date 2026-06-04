@@ -30,7 +30,9 @@ print("AI 모델 로딩 완료!")
 app = FastAPI(title="CIFAR10 이미지 분류 분석 서버")
 
 # 이미지 추론 함수
-def predict_image(image_bytes: bytes) -> dict:
+def predict_image(image_bytes: bytes) -> dict: # :bytes는 데이터 타입 힌트,
+                                               # -> dict:는  return값이 dict라는 힌트
+                                               # 없어도 상관 없다
 
     # 1. Byte -> PIL Image -> RGB 변환
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
@@ -89,4 +91,4 @@ async def predict(file: UploadFile = File(...)):
 # =====================================================
 if __name__ == "__main__":
     # 제공해주신 기존 IP와 FastAPI 포트(8000) 구성
-    uvicorn.run(app, host="192.168.219.102", port=8000)
+    uvicorn.run(app, host="192.168.0.47", port=8000)
