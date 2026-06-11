@@ -1,1 +1,17 @@
+# 주피터 노트북 체크포인트
+.ipynb_checkpoints/
+**/ .ipynb_checkpoints/
+
+# 딥러닝 모델 가중치 파일
+*.keras
+*.h5
+*.pkl
+
+# 오디오 데이터 및 전처리 이미지 폴더 전체 제외
+**/audio/
+**/new_audio/
+**/spectrogram_data/
+**/spectrogram_split/
+
+# 대용량 CSV 데이터 폴더 제외
 data/
